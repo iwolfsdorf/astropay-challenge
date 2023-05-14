@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "ba8b02a8-f972-4674-9a4a-dbc71f7cbc7d",
+		"name": "astropay-challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27314882"
+	},
+	"item": [
+		{
+			"name": "GetPosts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/posts",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPost",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/posts/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"posts",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetComments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/posts/5/comments",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"posts",
+						"5",
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPostWithTitleContaining",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/postsTitle?containTitle=Intento",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"postsTitle"
+					],
+					"query": [
+						{
+							"key": "containTitle",
+							"value": "Intento"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SavePost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\" : \"Intento numero 50\",\r\n    \"message\" : \"Seguimos en proceso\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/posts",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SaveComment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"message\" : \"Me sirvio el post\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/posts/5/comments",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"posts",
+						"5",
+						"comments"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
